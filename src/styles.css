@@ -1,0 +1,112 @@
+.body-container {
+  width: 800px;
+  color: #5a6275;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+}
+
+.body-container h1 {
+  color: #af78cc;
+  font-size: 34px;
+}
+
+.weather-container {
+  border: 4px solid #5a6275;
+  border-radius: 2px;
+  margin: 10px 30px 10px 40px;
+  padding: 30px 30px 40px 30px;
+}
+
+/* Search & Current button */
+#input-city {
+  border: 3px solid #949aa9;
+  border-radius: 25px;
+  padding: 6px 8px 6px 12px;
+}
+
+#search-btn {
+  color: #5a6275;
+  border: 4px solid #016fc5;
+  border-radius: 4px;
+  background: #fff;
+  padding: 3px 10px;
+}
+
+#current-btn {
+  color: #5a6275;
+  border: 4px solid #8dc351;
+  border-radius: 4px;
+  background: #fff;
+  padding: 3px 10px;
+}
+
+/* City & State */
+
+.current-city-container h3 {
+  margin: 0;
+  text-align: right;
+  font-size: 28px;
+  font-weight: 350;
+}
+.current-city-container p {
+  text-align: right;
+  font-size: 14px;
+}
+
+#current-date,
+.sunny-cloudy {
+  margin-bottom: 0;
+}
+
+/* Current Temperature */
+.current-temp {
+  font-size: 40px;
+  font-weight: 400;
+  display: inline;
+}
+.current-temp .current-degrees {
+  font-size: 15px;
+  display: inline;
+  position: relative;
+  bottom: 20px;
+  right: 6px;
+}
+/* Precipitation / Humidity / Wind */
+#description {
+  font-size: 12px;
+}
+#description span {
+  margin: 0 3px;
+}
+
+/* Weekdays */
+
+.weekday-container {
+  vertical-align: middle;
+}
+
+.weekday-container .weekday {
+  margin: 0 auto;
+  text-align: center;
+}
+.weekday h4 {
+  margin: 0 auto;
+  font-size: 20px;
+  color: #989eac;
+}
+
+.weekday .lg-emoji {
+  font-size: 60px;
+  margin: 0 auto;
+}
+.weekday p {
+  margin: 0 auto;
+}
+
+.weekday-container .current-weekday {
+  border: 4px solid #c8e2ac;
+  border-radius: 2px;
+  background: #f2f8ea;
+  padding: 0 7px;
+}

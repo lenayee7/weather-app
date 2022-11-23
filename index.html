@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🐠 Fishie's Weather App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/styles.css" />
+    <!-- Axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="body-container mt-5">
+      <h1 class="ms-3 mb-4">🐠 Fishie's Weather App</h1>
+      <main class="weather-container">
+        <div class="row">
+          <div class="col-8 current-container">
+            <input type="text" placeholder="Enter a city" id="input-city" />
+            <input type="button" value="Search" id="search-btn" />
+            <input type="button" value="Current" id="current-btn" />
+            <div class="mt-3 ms-2">
+              <h2 class="current-temp"></h2>
+              <span class="current-degrees"><strong>°F</strong>|°C</span>
+            </div>
+          </div>
+          <div class="col-4 current-city-container">
+            <h3 id="current-city"></h3>
+            <p id="current-date"></p>
+            <p id="description"></p>
+          </div>
+          <div class="degree-details">
+            <p>Humidity: <span id="humidity"></span>%</p>
+            <p>Wind: <span id="wind"></span>mph</p>
+          </div>
+        </div>
+        <div class="row weekday-container pb-4">
+          <div class="col weekday current-weekday">
+            <h4>Wed</h4>
+            <p class="lg-emoji">🌤</p>
+            <p><strong>84°</strong> 70°</p>
+          </div>
+          <div class="col weekday">
+            <h4>Thu</h4>
+            <p class="lg-emoji">🌤</p>
+            <p><strong>82°</strong> 74°</p>
+          </div>
+          <div class="col weekday">
+            <h4>Fri</h4>
+            <p class="lg-emoji">🌥</p>
+            <p><strong>85°</strong> 76°</p>
+          </div>
+          <div class="col weekday">
+            <h4>Sat</h4>
+            <p class="lg-emoji">🌤</p>
+            <p><strong>85°</strong> 75°</p>
+          </div>
+          <div class="col weekday">
+            <h4>Sun</h4>
+            <p class="lg-emoji">🌤</p>
+            <p><strong>84°</strong> 75°</p>
+          </div>
+          <div class="col weekday">
+            <h4>Mon</h4>
+            <p class="lg-emoji">🌤</p>
+            <p><strong>84°</strong> 75°</p>
+          </div>
+          <div class="col weekday">
+            <h4>Tue</h4>
+            <p class="lg-emoji">🌤</p>
+            <p><strong>84°</strong> 74°</p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
