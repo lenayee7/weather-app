@@ -73,7 +73,6 @@ currentBtn.addEventListener("click", getCurrentLocation);
 
 let cityInput = document.querySelector("#input-city");
 cityInput.addEventListener("keypress", function (event) {
-  //   event.preventDefault();
   if (event.keyCode == 13) {
     let city = document.querySelector("#input-city").value;
     searchCity(city);
