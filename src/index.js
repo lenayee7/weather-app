@@ -41,7 +41,6 @@ function displayWeatherCondition(response) {
 }
 
 function handleSubmit(event) {
-  debugger;
   event.preventDefault();
   let city = document.querySelector("#input-city").value;
   searchCity(city);
@@ -50,7 +49,7 @@ function handleSubmit(event) {
 function searchCity(city) {
   let apiKey = "96fd74caa155821910acc2f9ba5b0542";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  console.log("Search City [function]", apiUrl);
+  //   console.log("Search City [function]", apiUrl);
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
@@ -71,6 +70,15 @@ searchBtn.addEventListener("click", handleSubmit);
 
 let currentBtn = document.querySelector("#current-btn");
 currentBtn.addEventListener("click", getCurrentLocation);
+
+let cityInput = document.querySelector("#input-city");
+cityInput.addEventListener("keypress", function (event) {
+  //   event.preventDefault();
+  if (event.keyCode == 13) {
+    let city = document.querySelector("#input-city").value;
+    searchCity(city);
+  }
+});
 
 displayCurrentDate();
 searchCity("Honolulu");
