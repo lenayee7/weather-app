@@ -19,10 +19,10 @@
 }
 
 /* Search & Current button */
-#input-city {
+#city-name {
   border: 3px solid #949aa9;
   border-radius: 25px;
-  padding: 6px 8px 6px 12px;
+  padding: 6px 40px 6px 12px;
 }
 
 #search-btn {
@@ -60,24 +60,42 @@
 }
 
 /* Current Temperature */
-.current-temp {
+
+#temperature {
   font-size: 40px;
   font-weight: 400;
   display: inline;
 }
-.current-temp .current-degrees {
+#temperature .current-degrees {
   font-size: 15px;
   display: inline;
   position: relative;
   bottom: 20px;
   right: 6px;
 }
+
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+}
+
+.link {
+  text-decoration: none;
+}
+
+#weather-icon {
+  width: 60px;
+}
+
 /* Precipitation / Humidity / Wind */
 #description {
   font-size: 12px;
 }
 #description span {
   margin: 0 3px;
+}
+
+.humidity p {
+  margin-bottom: 0;
 }
 
 /* Weekdays */
