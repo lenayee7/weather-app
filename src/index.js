@@ -18,10 +18,10 @@ function displayCurrentDate(timestamp) {
     "Saturday",
     "Sunday",
   ];
-
+  console.log("displayCurrentDate", timestamp);
   let getDay = date.getDay();
 
-  return `${weekdays[getDay]} ${getHours}: ${getMinutes}`;
+  return `${weekdays[getDay]} ${getHours}:${getMinutes}`;
 }
 
 function formatDay(timestamp) {
@@ -39,8 +39,6 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    console.log("dayyy", forecastDay.dt);
-
     if (index < 6) {
       forecastHTML =
         forecastHTML +
@@ -88,8 +86,9 @@ function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#weather-icon");
 
   celsiusTemperature = response.data.main.temp;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
 
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
   currentCityElement.innerHTML = response.data.name;
@@ -124,25 +123,6 @@ function searchLocation(position) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
 let celsiusTemperature = null;
 
 function getCurrentLocation(event) {
@@ -164,10 +144,10 @@ cityNameInput.addEventListener("keypress", function (event) {
   }
 });
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+// let fahrenheitLink = document.querySelector("#fahrenheit-link");
+// fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
+// let celsiusLink = document.querySelector("#celsius-link");
+// celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("New York");

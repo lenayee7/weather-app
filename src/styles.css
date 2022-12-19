@@ -129,6 +129,12 @@
   padding: 0 7px;
 }
 
+/* Forecast */
+
+.weather-forecast-temperature-max {
+  font-weight: 600;
+}
+
 #signature {
   margin-left: 40px;
 }
